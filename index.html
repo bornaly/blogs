@@ -198,8 +198,12 @@
     function filterPosts() {
       const query = document.getElementById('searchInput').value.toLowerCase();
       allPosts.forEach(post => {
+        # const title = post.getAttribute('data-title');
+        # post.style.display = title.includes(query) ? '' : 'none';
         const title = post.getAttribute('data-title');
-        post.style.display = title.includes(query) ? '' : 'none';
+        const words = title.split(' ');
+        post.style.display = words.some(word => word.includes(query)) ? '' : 'none';
+
       });
     }
     function filterTag(tag) {
