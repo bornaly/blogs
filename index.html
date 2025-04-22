@@ -17,8 +17,8 @@ header { background: #003366; color: white; text-align: center; padding: 40px 20
 footer { background: #003366; color: white; text-align: center; padding: 20px; font-size: 0.9em; }
 </style></head><body>
 <header><h1>NextGen Threat</h1><p>Cybersecurity & Tech Insights by Faruk Ahmed</p></header>
-<div class="search-container"><input type="text" id="searchInput" onkeyup="filterPosts()" placeholder="Search by title..."></div>
-<div class="filter">
+<div class='search-container'><input type='text' id='searchInput' onkeyup='filterPosts()' placeholder='Search by title...'></div>
+<div class='filter'>
   <button onclick="filterTag('All')">All</button>
   <button onclick="filterTag('Linux')">Linux</button>
   <button onclick="filterTag('Bash')">Bash</button>
@@ -173,7 +173,7 @@ footer { background: #003366; color: white; text-align: center; padding: 20px; f
     <div class='meta'>📅 2025-04-20 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Linux, Bash, Cybersecurity</div>
   </div>
 </div></div>
-<footer>Updated 2025-04-22 17:36:36 · Built by Faruk Ahmed</footer>
+<footer>Updated 2025-04-22 17:44:12 · Built by Faruk Ahmed</footer>
 <script>
 const posts = document.querySelectorAll('.card');
 function filterPosts() {
@@ -189,5 +189,4 @@ function filterTag(tag) {
     post.style.display = (tag === 'All' || tags.includes(tag)) ? '' : 'none';
   });
 }
-</script>
-</body></html>
+</script></body></html>
