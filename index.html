@@ -1,360 +1,368 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"><title>NextGen Threat Blog</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<style>
-body { font-family: 'Roboto', sans-serif; background: #f5f7fa; margin: 0; }
-header { background: #003366; color: white; text-align: center; padding: 40px 20px; }
-.search-container { text-align: center; margin: 20px; }
-.search-container input { padding: 10px; width: 60%; max-width: 400px; border-radius: 8px; border: 1px solid #ccc; }
-.filter { text-align: center; margin: 10px; }
-.filter button { padding: 10px 15px; margin: 5px; border: none; background: #007acc; color: white; border-radius: 8px; cursor: pointer; }
-.container { max-width: 1100px; margin: 20px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.card { background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.07); }
-.card img { width: 100%; height: 220px; object-fit: cover; }
-.card-content { padding: 20px; }
-.meta { font-size: 0.85em; color: #777; }
-footer { background: #003366; color: white; text-align: center; padding: 20px; font-size: 0.9em; }
-</style></head><body>
-<header><h1>NextGen Threat</h1><p>Cybersecurity & Tech Insights by Faruk Ahmed</p></header>
-<div class='search-container'><input type='text' id='searchInput' onkeyup='filterPosts()' placeholder='Search by title...'></div>
-<div class='filter'>
-  <button onclick="filterTag('All')">All</button>
-  <button onclick="filterTag('Linux')">Linux</button>
-  <button onclick="filterTag('Bash')">Bash</button>
-  <button onclick="filterTag('Python')">Python</button>
-  <button onclick="filterTag('Cybersecurity')">Cybersecurity</button>
-</div>
-<div class='container'>
-<div class='card' data-tags="Linux Cybersecurity" data-title="why i use read-only partitions on my linux servers (and you should too) | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-b2e8f43c3b0f" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*q3oi8OWCN18paWdA5SlWPQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-b2e8f43c3b0f" target="_blank">Why I Use Read-Only Partitions on My Linux Servers (And You Should Too) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-30 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Linux, Cybersecurity</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NextGen Threat Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; background: #f5f7fa; margin: 0; }
+    header { background: #003366; color: white; text-align: center; padding: 40px 20px; }
+    header h1 { font-size: 2.5em; margin: 0; }
+    header p { font-size: 1.2em; margin-top: 10px; }
+    .search-container { text-align: center; margin: 20px auto; }
+    .search-container input { padding: 10px; width: 60%; max-width: 400px; font-size: 1em; border: 1px solid #ccc; border-radius: 8px; }
+    .filter { text-align: center; margin: 10px; }
+    .filter button { padding: 10px 15px; margin: 5px; border: none; background: #007acc; color: white; border-radius: 8px; cursor: pointer; }
+    .container { max-width: 1100px; margin: 20px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .card { background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.07); overflow: hidden; transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .card-content { padding: 20px; }
+    .card-content h2 { margin: 0 0 10px; font-size: 1.4em; color: #003366; }
+    .meta { font-size: 0.85em; color: #777; margin-top: 8px; }
+    footer { background: #003366; color: white; text-align: center; padding: 20px; font-size: 0.9em; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NextGen Threat</h1>
+    <p>Cybersecurity & Tech Insights by Faruk Ahmed</p>
+  </header>
+  <div class='search-container'>
+    <input type='text' id='searchInput' onkeyup='filterPosts()' placeholder='Search blog titles...'>
   </div>
-</div>
-<div class='card' data-tags="Linux Bash" data-title="how i rebuild a linux server after a suspected compromise (step by step) | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-i-rebuild-a-linux-server-after-a-suspected-compromise-step-by-step-68f79e4a9e52" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*1uRVzOByuofZxaQ93raBKQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-rebuild-a-linux-server-after-a-suspected-compromise-step-by-step-68f79e4a9e52" target="_blank">How I Rebuild a Linux Server After a Suspected Compromise (Step by Step) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-29 · ⏱️ 1 min read · 👏 2 claps · 🏷️ Linux, Bash</div>
+  <div class='filter'>
+    <button onclick="filterTag('All')">All</button>
+    <button onclick="filterTag('Python')">Python</button>
+    <button onclick="filterTag('Linux')">Linux</button>
+    <button onclick="filterTag('Bash')">Bash</button>
+    <button onclick="filterTag('Cybersecurity')">Cybersecurity</button>
   </div>
-</div>
-<div class='card' data-tags="Linux Bash" data-title="the one log entry that made me realize my linux server was being scanned | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/the-one-log-entry-that-made-me-realize-my-linux-server-was-being-scanned-03775774cc5d" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*7C9oH_7U7q17t_1D4TAm4g.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-one-log-entry-that-made-me-realize-my-linux-server-was-being-scanned-03775774cc5d" target="_blank">The One Log Entry That Made Me Realize My Linux Server Was Being Scanned | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-27 · ⏱️ 1 min read · 👏 2 claps · 🏷️ Linux, Bash</div>
+  <div class='container' id='postContainer'>
+
+    <div class='card' data-tags='Linux, Cybersecurity' data-title='why i use read-only partitions on my linux servers (and you should too) | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-b2e8f43c3b0f" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*q3oi8OWCN18paWdA5SlWPQ.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-b2e8f43c3b0f" target="_blank">Why I Use Read-Only Partitions on My Linux Servers (And You Should Too) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-30 · ⏱️ 1 min read · 🏷️ Linux, Cybersecurity</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Bash' data-title='the one log entry that made me realize my linux server was being scanned | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/the-one-log-entry-that-made-me-realize-my-linux-server-was-being-scanned-03775774cc5d" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*7C9oH_7U7q17t_1D4TAm4g.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-one-log-entry-that-made-me-realize-my-linux-server-was-being-scanned-03775774cc5d" target="_blank">The One Log Entry That Made Me Realize My Linux Server Was Being Scanned | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-27 · ⏱️ 1 min read · 🏷️ Linux, Bash</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Bash, Cybersecurity' data-title='how to audit a linux or ubuntu server like a security consultant | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/how-to-audit-a-linux-or-ubuntu-server-like-a-security-consultant-39029092a96a" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*do_oV66fAb-gRrCVRuYLUw.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-to-audit-a-linux-or-ubuntu-server-like-a-security-consultant-39029092a96a" target="_blank">How to Audit a Linux or Ubuntu Server Like a Security Consultant | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-23 · ⏱️ 1 min read · 🏷️ Linux, Bash, Cybersecurity</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux' data-title='how i use fail2ban on ubuntu and linux to block attackers before they get in | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/how-i-use-fail2ban-on-ubuntu-and-linux-to-block-attackers-before-they-get-in-fdb848ce9c6c" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*KaWKNqc_1u28v1nc2Dtjsg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-use-fail2ban-on-ubuntu-and-linux-to-block-attackers-before-they-get-in-fdb848ce9c6c" target="_blank">How I Use Fail2Ban on Ubuntu and Linux to Block Attackers Before They Get In | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-26 · ⏱️ 1 min read · 🏷️ Linux</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Bash' data-title='how i rebuild a linux server after a suspected compromise (step by step) | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/how-i-rebuild-a-linux-server-after-a-suspected-compromise-step-by-step-68f79e4a9e52" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*1uRVzOByuofZxaQ93raBKQ.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-rebuild-a-linux-server-after-a-suspected-compromise-step-by-step-68f79e4a9e52" target="_blank">How I Rebuild a Linux Server After a Suspected Compromise (Step by Step) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-29 · ⏱️ 1 min read · 🏷️ Linux, Bash</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Bash' data-title='5 linux commands hackers use (and how to detect them on your server) | by faruk ahmed | apr, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/5-linux-commands-hackers-use-and-how-to-detect-them-on-your-server-d44f488f7fa8" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*zWNZXdfWAnicxRQ6etd5kQ.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/5-linux-commands-hackers-use-and-how-to-detect-them-on-your-server-d44f488f7fa8" target="_blank">5 Linux Commands Hackers Use (And How to Detect Them on Your Server) | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-30 · ⏱️ 1 min read · 🏷️ Linux, Bash</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux' data-title='5 linux hardening techniques i apply before hosting any website | by faruk ahmed | apr, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/5-linux-hardening-techniques-i-apply-before-hosting-any-website-d3a58c9836ff" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*87-USVuhq27EMhapOpF_Lg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/5-linux-hardening-techniques-i-apply-before-hosting-any-website-d3a58c9836ff" target="_blank">5 Linux Hardening Techniques I Apply Before Hosting Any Website | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-28 · ⏱️ 1 min read · 🏷️ Linux</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux' data-title='5 more techniques to lock down public-facing linux servers | by faruk ahmed | apr, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/5-more-techniques-to-lock-down-public-facing-linux-servers-63b45e3930b6" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*Yg_vaH8_tr_j4-4v_IjC1Q.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/5-more-techniques-to-lock-down-public-facing-linux-servers-63b45e3930b6" target="_blank">5 More Techniques to Lock Down Public-Facing Linux Servers | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-28 · ⏱️ 1 min read · 🏷️ Linux</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='5 windows defender features you’re probably not using (but should be) | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/5-windows-defender-features-youre-probably-not-using-but-should-be-ca02740fc76d" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*XktsL2llqOsK09HWlGc93w.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/5-windows-defender-features-youre-probably-not-using-but-should-be-ca02740fc76d" target="_blank">5 Windows Defender Features You’re Probably Not Using (But Should Be) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-06 · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Cybersecurity' data-title='6 linux misconfigurations i regret not catching sooner | by faruk ahmed | apr, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/6-linux-misconfigurations-i-regret-not-catching-sooner-a6769849762d" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*yohddqZ0RKi9p8hqUmYlVQ.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/6-linux-misconfigurations-i-regret-not-catching-sooner-a6769849762d" target="_blank">6 Linux Misconfigurations I Regret Not Catching Sooner | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-25 · ⏱️ 1 min read · 🏷️ Linux, Cybersecurity</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux' data-title='6 signs your linux server might be compromised (and what to do next) | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/6-signs-your-linux-server-might-be-compromised-and-what-to-do-next-5d3b4032e3cd" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*HGMB94FD6A0vDXUcIf0Unw.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/6-signs-your-linux-server-might-be-compromised-and-what-to-do-next-5d3b4032e3cd" target="_blank">6 Signs Your Linux Server Might Be Compromised (And What to Do Next) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-01 · ⏱️ 1 min read · 🏷️ Linux</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Cybersecurity' data-title='7 linux security mistakes i made (so you don’t have to) | by faruk ahmed | apr, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/7-linux-security-mistakes-i-made-so-you-dont-have-to-27107263be7a" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*3QwH1UE4gb5z_ONKsouBfA.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/7-linux-security-mistakes-i-made-so-you-dont-have-to-27107263be7a" target="_blank">7 Linux Security Mistakes I Made (So You Don’t Have To) | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-22 · ⏱️ 1 min read · 🏷️ Linux, Cybersecurity</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Cybersecurity' data-title='7 windows server defaults you should change right after installation | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/7-windows-server-defaults-you-should-change-right-after-installation-310e56fee2a1" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*Q7ixoSsCEnk2gxjFW6J93Q.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/7-windows-server-defaults-you-should-change-right-after-installation-310e56fee2a1" target="_blank">7 Windows Server Defaults You Should Change Right After Installation | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-04 · ⏱️ 1 min read · 🏷️ Cybersecurity</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux' data-title='8 log files every linux admin should monitor daily | by faruk ahmed | apr, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/8-log-files-every-linux-admin-should-monitor-daily-5d9334830392" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*O3-JJlgkcI3p1l5wmRh2XQ.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/8-log-files-every-linux-admin-should-monitor-daily-5d9334830392" target="_blank">8 Log Files Every Linux Admin Should Monitor Daily | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-24 · ⏱️ 1 min read · 🏷️ Linux</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux' data-title='how i accidentally left a port open on my linux server (and how i caught it) | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/how-i-accidentally-left-a-port-open-on-my-linux-server-and-how-i-caught-it-bffd2c052514" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*gacbrAwtK40T1PKZIpNVgQ.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-accidentally-left-a-port-open-on-my-linux-server-and-how-i-caught-it-bffd2c052514" target="_blank">How I Accidentally Left a Port Open on My Linux Server (And How I Caught It) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-15 · ⏱️ 1 min read · 🏷️ Linux</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Bash' data-title='how i caught a suspicious shell script running in /tmp (and what it taught me) | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/how-i-caught-a-suspicious-shell-script-running-in-tmp-and-what-it-taught-me-19fcd7abe63a" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*AsghYr1Y1iJA_DjTd9NAMg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-caught-a-suspicious-shell-script-running-in-tmp-and-what-it-taught-me-19fcd7abe63a" target="_blank">How I Caught a Suspicious Shell Script Running in /tmp (And What It Taught Me) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-12 · ⏱️ 1 min read · 🏷️ Bash</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Cybersecurity' data-title='how i use auditd to catch silent security threats on linux | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-silent-security-threats-on-linux-9e9b5ba48895" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*p0_4Rx97FGVxd5tbZ-KDBA.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-silent-security-threats-on-linux-9e9b5ba48895" target="_blank">How I Use AuditD to Catch Silent Security Threats on Linux | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-08 · ⏱️ 1 min read · 🏷️ Linux, Cybersecurity</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Bash' data-title='how i use bash scripts to save time and earn more as a linux freelancer | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/how-i-use-bash-scripts-to-save-time-and-earn-more-as-a-linux-freelancer-959f5d31474e" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*yQ5kluuTc7IY-09lfH_5aQ.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-use-bash-scripts-to-save-time-and-earn-more-as-a-linux-freelancer-959f5d31474e" target="_blank">How I Use Bash Scripts to Save Time and Earn More as a Linux Freelancer | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-14 · ⏱️ 1 min read · 🏷️ Linux, Bash</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux' data-title='how to audit your linux server for hidden threats in under 15 minutes | by faruk ahmed | apr, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/how-to-audit-your-linux-server-for-hidden-threats-in-under-15-minutes-d057476f631d" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*1IY6R5xrLch5I2EEH6Q-Zg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-to-audit-your-linux-server-for-hidden-threats-in-under-15-minutes-d057476f631d" target="_blank">How to Audit Your Linux Server for Hidden Threats in Under 15 Minutes | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-21 · ⏱️ 1 min read · 🏷️ Linux</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux' data-title='how to detect suspicious activity on a linux server in under 5 minutes | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/how-to-detect-suspicious-activity-on-a-linux-server-in-under-5-minutes-6a60afd52a94" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*gkhbgYZq2Ia0f2VDBLmZHQ.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-to-detect-suspicious-activity-on-a-linux-server-in-under-5-minutes-6a60afd52a94" target="_blank">How to Detect Suspicious Activity on a Linux Server in Under 5 Minutes | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-06 · ⏱️ 1 min read · 🏷️ Linux</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Python' data-title='how to set up a honeypot on your linux server to catch attackers in action | by faruk ahmed | apr, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/how-to-set-up-a-honeypot-on-your-linux-server-to-catch-attackers-in-action-1f0c13bddee5" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*BRcx_H7D6HowcKyyEozJcQ.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-to-set-up-a-honeypot-on-your-linux-server-to-catch-attackers-in-action-1f0c13bddee5" target="_blank">How to Set Up a Honeypot on Your Linux Server to Catch Attackers in Action | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-20 · ⏱️ 1 min read · 🏷️ Linux, Python</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Bash, Python' data-title='i taught my linux server to feel regret — then watched it apologize in real-time | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/i-taught-my-linux-server-to-feel-regret-then-watched-it-apologize-in-real-time-a9ceef9d33f3" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*vJF5d-gxJOmhFP_hjIKtaw.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/i-taught-my-linux-server-to-feel-regret-then-watched-it-apologize-in-real-time-a9ceef9d33f3" target="_blank">I Taught My Linux Server to Feel Regret — Then Watched It Apologize in Real-Time | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-10 · ⏱️ 1 min read · 🏷️ Linux, Bash, Python</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Cybersecurity' data-title='i tried breaking into my own linux server — here’s what i learned about real-world security | by faruk ahmed | apr, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/i-tried-breaking-into-my-own-linux-server-heres-what-i-learned-about-real-world-security-5c40078431b8" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*wWMxGO7E4WZfptZuaIpRng.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/i-tried-breaking-into-my-own-linux-server-heres-what-i-learned-about-real-world-security-5c40078431b8" target="_blank">I Tried Breaking Into My Own Linux Server — Here’s What I Learned About Real-World Security | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-18 · ⏱️ 1 min read · 🏷️ Linux, Cybersecurity</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux' data-title='the 5 most dangerous linux services if left unsecured | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/the-5-most-dangerous-linux-services-if-left-unsecured-53a96ca3924f" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*-tRvnJAxLzHfDWUBY8UPhg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-5-most-dangerous-linux-services-if-left-unsecured-53a96ca3924f" target="_blank">The 5 Most Dangerous Linux Services If Left Unsecured | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-18 · ⏱️ 1 min read · 🏷️ Linux</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Bash, Cybersecurity' data-title='the 5 most overlooked linux files that could expose your server to hackers | by faruk ahmed | apr, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/the-5-most-overlooked-linux-files-that-could-expose-your-server-to-hackers-0c5895816363" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*4_10pqxxRELrKZCTLWwq2w.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-5-most-overlooked-linux-files-that-could-expose-your-server-to-hackers-0c5895816363" target="_blank">The 5 Most Overlooked Linux Files That Could Expose Your Server to Hackers | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-20 · ⏱️ 1 min read · 🏷️ Linux, Bash, Cybersecurity</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Python' data-title='1 linux command that saved me from a server meltdown | by faruk ahmed | apr, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/the-one-linux-command-that-saved-me-from-a-server-meltdown-449ccdb31f77" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*ino_NTkuPRA-VV0BJf-7ZQ.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-one-linux-command-that-saved-me-from-a-server-meltdown-449ccdb31f77" target="_blank">1 Linux Command That Saved Me From a Server Meltdown | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-29 · ⏱️ 1 min read · 🏷️ Linux, Python</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Cybersecurity' data-title='the one linux security habit that saved me from a silent breach | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-saved-me-from-a-silent-breach-a0a138d25962" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*621KYXOyORhaz0fTif9BMw.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-saved-me-from-a-silent-breach-a0a138d25962" target="_blank">The One Linux Security Habit That Saved Me From a Silent Breach | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-09 · ⏱️ 1 min read · 🏷️ Linux, Cybersecurity</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux' data-title='what i check first when a linux server starts acting suspicious | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/what-i-check-first-when-a-linux-server-starts-acting-suspicious-5bce6b46f0c9" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1024/1*hqLYEdO2MYgn-J-wmnBheQ.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/what-i-check-first-when-a-linux-server-starts-acting-suspicious-5bce6b46f0c9" target="_blank">What I Check First When a Linux Server Starts Acting Suspicious | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-21 · ⏱️ 1 min read · 🏷️ Linux</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Bash' data-title='why i treat every new linux server as already compromised | by faruk ahmed | may, 2025 | medium'>
+      <a href="https://medium.com/@bornaly/why-i-treat-every-new-linux-server-as-already-compromised-3e740871ce06" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*5Haa6ZNYX4qXcw2I0ILkYg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-treat-every-new-linux-server-as-already-compromised-3e740871ce06" target="_blank">Why I Treat Every New Linux Server as Already Compromised | by Faruk Ahmed | May, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-05-20 · ⏱️ 1 min read · 🏷️ Linux, Bash</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='Linux, Cybersecurity' data-title='7 critical linux logs you should review after a security incident | by faruk ahmed | nextgenthreat | apr, 2025 | medium'>
+      <a href="https://medium.com/nextgenthreat/7-critical-linux-logs-you-should-review-after-a-security-incident-0adaa12906af" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*jIO58ke-PzYNeDt1i_Y3bw.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/nextgenthreat/7-critical-linux-logs-you-should-review-after-a-security-incident-0adaa12906af" target="_blank">7 Critical Linux Logs You Should Review After a Security Incident | by Faruk Ahmed | nextgenthreat | Apr, 2025 | Medium</a></h2>
+        <div class='meta'>📅 2025-04-29 · ⏱️ 1 min read · 🏷️ Linux, Cybersecurity</div>
+      </div>
+    </div>
+
   </div>
-</div>
-<div class='card' data-tags="Linux" data-title="how i use fail2ban on ubuntu and linux to block attackers before they get in | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-i-use-fail2ban-on-ubuntu-and-linux-to-block-attackers-before-they-get-in-fdb848ce9c6c" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*KaWKNqc_1u28v1nc2Dtjsg.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-use-fail2ban-on-ubuntu-and-linux-to-block-attackers-before-they-get-in-fdb848ce9c6c" target="_blank">How I Use Fail2Ban on Ubuntu and Linux to Block Attackers Before They Get In | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-26 · ⏱️ 1 min read · 👏 1 claps · 🏷️ Linux</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Bash Cybersecurity" data-title="how to audit a linux or ubuntu server like a security consultant | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-to-audit-a-linux-or-ubuntu-server-like-a-security-consultant-39029092a96a" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*do_oV66fAb-gRrCVRuYLUw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-to-audit-a-linux-or-ubuntu-server-like-a-security-consultant-39029092a96a" target="_blank">How to Audit a Linux or Ubuntu Server Like a Security Consultant | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-23 · ⏱️ 1 min read · 👏 51 claps · 🏷️ Linux, Bash, Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux" data-title="what i check first when a linux server starts acting suspicious | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/what-i-check-first-when-a-linux-server-starts-acting-suspicious-5bce6b46f0c9" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*hqLYEdO2MYgn-J-wmnBheQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/what-i-check-first-when-a-linux-server-starts-acting-suspicious-5bce6b46f0c9" target="_blank">What I Check First When a Linux Server Starts Acting Suspicious | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-21 · ⏱️ 1 min read · 👏 2 claps · 🏷️ Linux</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Bash" data-title="why i treat every new linux server as already compromised | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/why-i-treat-every-new-linux-server-as-already-compromised-3e740871ce06" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*5Haa6ZNYX4qXcw2I0ILkYg.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-treat-every-new-linux-server-as-already-compromised-3e740871ce06" target="_blank">Why I Treat Every New Linux Server as Already Compromised | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-20 · ⏱️ 1 min read · 👏 72 claps · 🏷️ Linux, Bash</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux" data-title="the 5 most dangerous linux services if left unsecured | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/the-5-most-dangerous-linux-services-if-left-unsecured-53a96ca3924f" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*-tRvnJAxLzHfDWUBY8UPhg.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-5-most-dangerous-linux-services-if-left-unsecured-53a96ca3924f" target="_blank">The 5 Most Dangerous Linux Services If Left Unsecured | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-18 · ⏱️ 1 min read · 👏 1 claps · 🏷️ Linux</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux" data-title="how i accidentally left a port open on my linux server (and how i caught it) | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-i-accidentally-left-a-port-open-on-my-linux-server-and-how-i-caught-it-bffd2c052514" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*gacbrAwtK40T1PKZIpNVgQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-accidentally-left-a-port-open-on-my-linux-server-and-how-i-caught-it-bffd2c052514" target="_blank">How I Accidentally Left a Port Open on My Linux Server (And How I Caught It) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-15 · ⏱️ 1 min read · 👏 3 claps · 🏷️ Linux</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Bash" data-title="how i use bash scripts to save time and earn more as a linux freelancer | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-i-use-bash-scripts-to-save-time-and-earn-more-as-a-linux-freelancer-959f5d31474e" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*yQ5kluuTc7IY-09lfH_5aQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-use-bash-scripts-to-save-time-and-earn-more-as-a-linux-freelancer-959f5d31474e" target="_blank">How I Use Bash Scripts to Save Time and Earn More as a Linux Freelancer | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-14 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Linux, Bash</div>
-  </div>
-</div>
-<div class='card' data-tags="Bash" data-title="how i caught a suspicious shell script running in /tmp (and what it taught me) | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-i-caught-a-suspicious-shell-script-running-in-tmp-and-what-it-taught-me-19fcd7abe63a" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*AsghYr1Y1iJA_DjTd9NAMg.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-caught-a-suspicious-shell-script-running-in-tmp-and-what-it-taught-me-19fcd7abe63a" target="_blank">How I Caught a Suspicious Shell Script Running in /tmp (And What It Taught Me) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-12 · ⏱️ 1 min read · 👏 1 claps · 🏷️ Bash</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Bash Python" data-title="i taught my linux server to feel regret — then watched it apologize in real-time | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/i-taught-my-linux-server-to-feel-regret-then-watched-it-apologize-in-real-time-a9ceef9d33f3" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*vJF5d-gxJOmhFP_hjIKtaw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/i-taught-my-linux-server-to-feel-regret-then-watched-it-apologize-in-real-time-a9ceef9d33f3" target="_blank">I Taught My Linux Server to Feel Regret — Then Watched It Apologize in Real-Time | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-10 · ⏱️ 1 min read · 👏 2 claps · 🏷️ Linux, Bash, Python</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Cybersecurity" data-title="the one linux security habit that saved me from a silent breach | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-saved-me-from-a-silent-breach-a0a138d25962" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*621KYXOyORhaz0fTif9BMw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-saved-me-from-a-silent-breach-a0a138d25962" target="_blank">The One Linux Security Habit That Saved Me From a Silent Breach | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-09 · ⏱️ 1 min read · 👏 40 claps · 🏷️ Linux, Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Cybersecurity" data-title="how i use auditd to catch silent security threats on linux | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-silent-security-threats-on-linux-9e9b5ba48895" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*p0_4Rx97FGVxd5tbZ-KDBA.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-silent-security-threats-on-linux-9e9b5ba48895" target="_blank">How I Use AuditD to Catch Silent Security Threats on Linux | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-08 · ⏱️ 1 min read · 👏 2 claps · 🏷️ Linux, Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="5 windows defender features you’re probably not using (but should be) | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/5-windows-defender-features-youre-probably-not-using-but-should-be-ca02740fc76d" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*XktsL2llqOsK09HWlGc93w.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/5-windows-defender-features-youre-probably-not-using-but-should-be-ca02740fc76d" target="_blank">5 Windows Defender Features You’re Probably Not Using (But Should Be) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-06 · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux" data-title="how to detect suspicious activity on a linux server in under 5 minutes | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-to-detect-suspicious-activity-on-a-linux-server-in-under-5-minutes-6a60afd52a94" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*gkhbgYZq2Ia0f2VDBLmZHQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-to-detect-suspicious-activity-on-a-linux-server-in-under-5-minutes-6a60afd52a94" target="_blank">How to Detect Suspicious Activity on a Linux Server in Under 5 Minutes | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-06 · ⏱️ 1 min read · 👏 5 claps · 🏷️ Linux</div>
-  </div>
-</div>
-<div class='card' data-tags="Cybersecurity" data-title="7 windows server defaults you should change right after installation | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/7-windows-server-defaults-you-should-change-right-after-installation-310e56fee2a1" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*Q7ixoSsCEnk2gxjFW6J93Q.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/7-windows-server-defaults-you-should-change-right-after-installation-310e56fee2a1" target="_blank">7 Windows Server Defaults You Should Change Right After Installation | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-04 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux" data-title="6 signs your linux server might be compromised (and what to do next) | by faruk ahmed | may, 2025 | medium">
-  <a href="https://medium.com/@bornaly/6-signs-your-linux-server-might-be-compromised-and-what-to-do-next-5d3b4032e3cd" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*HGMB94FD6A0vDXUcIf0Unw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/6-signs-your-linux-server-might-be-compromised-and-what-to-do-next-5d3b4032e3cd" target="_blank">6 Signs Your Linux Server Might Be Compromised (And What to Do Next) | by Faruk Ahmed | May, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-05-01 · ⏱️ 1 min read · 👏 11 claps · 🏷️ Linux</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Bash" data-title="5 linux commands hackers use (and how to detect them on your server) | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/5-linux-commands-hackers-use-and-how-to-detect-them-on-your-server-d44f488f7fa8" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*zWNZXdfWAnicxRQ6etd5kQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/5-linux-commands-hackers-use-and-how-to-detect-them-on-your-server-d44f488f7fa8" target="_blank">5 Linux Commands Hackers Use (And How to Detect Them on Your Server) | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-30 · ⏱️ 1 min read · 👏 3 claps · 🏷️ Linux, Bash</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Python" data-title="1 linux command that saved me from a server meltdown | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/the-one-linux-command-that-saved-me-from-a-server-meltdown-449ccdb31f77" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*ino_NTkuPRA-VV0BJf-7ZQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-one-linux-command-that-saved-me-from-a-server-meltdown-449ccdb31f77" target="_blank">1 Linux Command That Saved Me From a Server Meltdown | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-29 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Linux, Python</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Cybersecurity" data-title="7 critical linux logs you should review after a security incident | by faruk ahmed | nextgenthreat | apr, 2025 | medium">
-  <a href="https://medium.com/nextgenthreat/7-critical-linux-logs-you-should-review-after-a-security-incident-0adaa12906af" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*jIO58ke-PzYNeDt1i_Y3bw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/nextgenthreat/7-critical-linux-logs-you-should-review-after-a-security-incident-0adaa12906af" target="_blank">7 Critical Linux Logs You Should Review After a Security Incident | by Faruk Ahmed | nextgenthreat | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-29 · ⏱️ 1 min read · 👏 1 claps · 🏷️ Linux, Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux" data-title="5 linux hardening techniques i apply before hosting any website | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/5-linux-hardening-techniques-i-apply-before-hosting-any-website-d3a58c9836ff" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*87-USVuhq27EMhapOpF_Lg.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/5-linux-hardening-techniques-i-apply-before-hosting-any-website-d3a58c9836ff" target="_blank">5 Linux Hardening Techniques I Apply Before Hosting Any Website | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-28 · ⏱️ 1 min read · 👏 4 claps · 🏷️ Linux</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux" data-title="5 more techniques to lock down public-facing linux servers | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/5-more-techniques-to-lock-down-public-facing-linux-servers-63b45e3930b6" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*Yg_vaH8_tr_j4-4v_IjC1Q.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/5-more-techniques-to-lock-down-public-facing-linux-servers-63b45e3930b6" target="_blank">5 More Techniques to Lock Down Public-Facing Linux Servers | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-28 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Linux</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Cybersecurity" data-title="6 linux misconfigurations i regret not catching sooner | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/6-linux-misconfigurations-i-regret-not-catching-sooner-a6769849762d" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*yohddqZ0RKi9p8hqUmYlVQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/6-linux-misconfigurations-i-regret-not-catching-sooner-a6769849762d" target="_blank">6 Linux Misconfigurations I Regret Not Catching Sooner | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-25 · ⏱️ 1 min read · 👏 7 claps · 🏷️ Linux, Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux" data-title="8 log files every linux admin should monitor daily | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/8-log-files-every-linux-admin-should-monitor-daily-5d9334830392" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*O3-JJlgkcI3p1l5wmRh2XQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/8-log-files-every-linux-admin-should-monitor-daily-5d9334830392" target="_blank">8 Log Files Every Linux Admin Should Monitor Daily | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-24 · ⏱️ 1 min read · 👏 2 claps · 🏷️ Linux</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Cybersecurity" data-title="7 linux security mistakes i made (so you don’t have to) | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/7-linux-security-mistakes-i-made-so-you-dont-have-to-27107263be7a" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*3QwH1UE4gb5z_ONKsouBfA.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/7-linux-security-mistakes-i-made-so-you-dont-have-to-27107263be7a" target="_blank">7 Linux Security Mistakes I Made (So You Don’t Have To) | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-22 · ⏱️ 1 min read · 👏 2 claps · 🏷️ Linux, Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux" data-title="how to audit your linux server for hidden threats in under 15 minutes | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-to-audit-your-linux-server-for-hidden-threats-in-under-15-minutes-d057476f631d" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*1IY6R5xrLch5I2EEH6Q-Zg.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-to-audit-your-linux-server-for-hidden-threats-in-under-15-minutes-d057476f631d" target="_blank">How to Audit Your Linux Server for Hidden Threats in Under 15 Minutes | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-21 · ⏱️ 1 min read · 👏 1 claps · 🏷️ Linux</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Python" data-title="how to set up a honeypot on your linux server to catch attackers in action | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-to-set-up-a-honeypot-on-your-linux-server-to-catch-attackers-in-action-1f0c13bddee5" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*BRcx_H7D6HowcKyyEozJcQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-to-set-up-a-honeypot-on-your-linux-server-to-catch-attackers-in-action-1f0c13bddee5" target="_blank">How to Set Up a Honeypot on Your Linux Server to Catch Attackers in Action | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-20 · ⏱️ 1 min read · 👏 1 claps · 🏷️ Linux, Python</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Bash Cybersecurity" data-title="the 5 most overlooked linux files that could expose your server to hackers | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/the-5-most-overlooked-linux-files-that-could-expose-your-server-to-hackers-0c5895816363" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*4_10pqxxRELrKZCTLWwq2w.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-5-most-overlooked-linux-files-that-could-expose-your-server-to-hackers-0c5895816363" target="_blank">The 5 Most Overlooked Linux Files That Could Expose Your Server to Hackers | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-20 · ⏱️ 1 min read · 👏 6 claps · 🏷️ Linux, Bash, Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Cybersecurity" data-title="i tried breaking into my own linux server — here’s what i learned about real-world security | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/i-tried-breaking-into-my-own-linux-server-heres-what-i-learned-about-real-world-security-5c40078431b8" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*wWMxGO7E4WZfptZuaIpRng.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/i-tried-breaking-into-my-own-linux-server-heres-what-i-learned-about-real-world-security-5c40078431b8" target="_blank">I Tried Breaking Into My Own Linux Server — Here’s What I Learned About Real-World Security | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-18 · ⏱️ 1 min read · 👏 5 claps · 🏷️ Linux, Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux" data-title="how to detect and block malicious ips on your ubuntu linux server in real time | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-to-detect-and-block-malicious-ips-on-your-ubuntu-linux-server-in-real-time-ee7c3aa98400" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*doIeYM9uler8MxnenKo8hw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-to-detect-and-block-malicious-ips-on-your-ubuntu-linux-server-in-real-time-ee7c3aa98400" target="_blank">How to Detect and Block Malicious IPs on Your Ubuntu Linux Server in Real Time | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-17 · ⏱️ 1 min read · 👏 1 claps · 🏷️ Linux</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Cybersecurity" data-title="10 security commands every linux admin should know (but probably doesn’t) | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/10-security-commands-every-linux-admin-should-know-but-probably-doesnt-02ad7afda229" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*LLlOnudxvyUu8r4fbguhww.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/10-security-commands-every-linux-admin-should-know-but-probably-doesnt-02ad7afda229" target="_blank">10 Security Commands Every Linux Admin Should Know (But Probably Doesn’t) | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-16 · ⏱️ 1 min read · 👏 3 claps · 🏷️ Linux, Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Python" data-title="how i use python to make extra cash every month (even as a beginner) | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-i-use-python-to-make-extra-cash-every-month-even-as-a-beginner-b5261ebee70c" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*OHseS0EUCmZhSN_McNQQvA.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-use-python-to-make-extra-cash-every-month-even-as-a-beginner-b5261ebee70c" target="_blank">How I Use Python to Make Extra Cash Every Month (Even as a Beginner) | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-15 · ⏱️ 1 min read · 👏 28 claps · 🏷️ Python</div>
-  </div>
-</div>
-<div class='card' data-tags="Python" data-title="how to use apis to build money-making tools (with python examples) | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-to-use-apis-to-build-money-making-tools-with-python-examples-57597f95a8fb" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*k-IpHen_YG3Cv1x3iGMu1g.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-to-use-apis-to-build-money-making-tools-with-python-examples-57597f95a8fb" target="_blank">How to Use APIs to Build Money-Making Tools (With Python Examples) | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-14 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Python</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Cybersecurity" data-title="how i harden my linux web server against cyber attacks (centos & ubuntu guide) | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-i-harden-my-linux-web-server-against-cyber-attacks-centos-ubuntu-guide-ac7879ce52f7" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*z8yUzCQkSp7k5cu3nawQPw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-harden-my-linux-web-server-against-cyber-attacks-centos-ubuntu-guide-ac7879ce52f7" target="_blank">How I Harden My Linux Web Server Against Cyber Attacks (CentOS & Ubuntu Guide) | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-13 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Linux, Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Bash" data-title="7 bash mistakes i made that cost me time (and how to avoid them) | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/7-bash-mistakes-i-made-that-cost-me-time-and-how-to-avoid-them-9110c2cc23c5" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*50HqwFmZFCrzqBOiVj_Piw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/7-bash-mistakes-i-made-that-cost-me-time-and-how-to-avoid-them-9110c2cc23c5" target="_blank">7 Bash Mistakes I Made That Cost Me Time (And How to Avoid Them) | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-12 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Linux, Bash</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Bash" data-title="5 simple bash scripts that can save you hours (and maybe make you money) | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/5-simple-bash-scripts-that-can-save-you-hours-and-maybe-make-you-money-963131cd74a7" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*bVKVPemaLhT-K60Y22qomw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/5-simple-bash-scripts-that-can-save-you-hours-and-maybe-make-you-money-963131cd74a7" target="_blank">5 Simple Bash Scripts That Can Save You Hours (and Maybe Make You Money) | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-10 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Linux, Bash</div>
-  </div>
-</div>
-<div class='card' data-tags="Cybersecurity" data-title="how ai is transforming cybersecurity: opportunities and challenges | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-ai-is-transforming-cybersecurity-opportunities-and-challenges-ab0c984c5ceb" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*JUTgncxxUM6BxyPqNuS2aQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-ai-is-transforming-cybersecurity-opportunities-and-challenges-ab0c984c5ceb" target="_blank">How AI is Transforming Cybersecurity: Opportunities and Challenges | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-08 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Linux Python" data-title="automating report distribution: a python script for emailing missing files">
-  <a href="https://medium.com/@bornaly/automating-report-distribution-a-python-script-for-emailing-missing-files-4f142d39cc9b" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*QPhYhQr05NWJWkIdZ-C3kw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/automating-report-distribution-a-python-script-for-emailing-missing-files-4f142d39cc9b" target="_blank">Automating Report Distribution: A Python Script for Emailing Missing Files</a></h2>
-    <div class='meta'>📅 2025-04-05 · ⏱️ 4 min read · 👏 0 claps · 🏷️ Linux, Python</div>
-  </div>
-</div>
-<div class='card' data-tags="Cybersecurity" data-title="embracing the unknown: how i turned challenges into opportunities in the tech world | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/embracing-the-unknown-how-i-turned-challenges-into-opportunities-in-the-tech-world-6e65be5b7a57" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*6tf5QKSRomP1fzOHK9ktsw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/embracing-the-unknown-how-i-turned-challenges-into-opportunities-in-the-tech-world-6e65be5b7a57" target="_blank">Embracing the Unknown: How I Turned Challenges into Opportunities in the Tech World | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-04 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Python Cybersecurity" data-title="encrypting and decrypting a .txt file using python’s cryptography library">
-  <a href="https://medium.com/@bornaly/encrypting-and-decrypting-a-txt-file-using-pythons-cryptography-library-ad641b1bf7b9" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1024/1*D2hcHqzTkHlnlH0XMGGRkQ.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/encrypting-and-decrypting-a-txt-file-using-pythons-cryptography-library-ad641b1bf7b9" target="_blank">Encrypting and Decrypting a .txt File Using Python’s Cryptography Library</a></h2>
-    <div class='meta'>📅 2025-04-04 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Python, Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="how to stay productive and focused in a world full of distractions | by faruk ahmed | apr, 2025 | medium">
-  <a href="https://medium.com/@bornaly/how-to-stay-productive-and-focused-in-a-world-full-of-distractions-b683fd0fc818" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*7zMPT0daAjn6y14GRleAQg.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-to-stay-productive-and-focused-in-a-world-full-of-distractions-b683fd0fc818" target="_blank">How to Stay Productive and Focused in a World Full of Distractions | by Faruk Ahmed | Apr, 2025 | Medium</a></h2>
-    <div class='meta'>📅 2025-04-04 · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="Python" data-title="secure your digital vault: a personal safe for your passwords">
-  <a href="https://medium.com/@bornaly/secure-your-digital-vault-a-personal-safe-for-your-passwords-e6b8b9fe8590" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1200/1*uj68LTmgeqBFq8Ggq3Bu6g.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/secure-your-digital-vault-a-personal-safe-for-your-passwords-e6b8b9fe8590" target="_blank">Secure Your Digital Vault: A Personal Safe for Your Passwords</a></h2>
-    <div class='meta'>📅 2025-01-14 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Python</div>
-  </div>
-</div>
-<div class='card' data-tags="Cybersecurity" data-title="bitcoin: the digital gold of the 21st century">
-  <a href="https://medium.com/@bornaly/bitcoin-the-digital-gold-of-the-21st-century-2dc1fda2ec5e" target="_blank"><img src="https://miro.medium.com/v2/da:true/resize:fit:1024/0*kaePKJ8vun4fnqmL" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/bitcoin-the-digital-gold-of-the-21st-century-2dc1fda2ec5e" target="_blank">Bitcoin: The Digital Gold of the 21st Century</a></h2>
-    <div class='meta'>📅 2024-12-09 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Cybersecurity</div>
-  </div>
-</div>
-<div class='card' data-tags="Cybersecurity" data-title="enhancing your cybersecurity practices in 2024:">
-  <a href="https://medium.com/@bornaly/enhancing-your-cybersecurity-practices-in-2024-6efb2c20c05d" target="_blank"><img src="https://miro.medium.com/v2/resize:fit:1017/1*TWfHrJ4scm0Ocp81KeMwTw.png" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/enhancing-your-cybersecurity-practices-in-2024-6efb2c20c05d" target="_blank">Enhancing Your Cybersecurity Practices in 2024:</a></h2>
-    <div class='meta'>📅 2024-11-26 · ⏱️ 1 min read · 👏 0 claps · 🏷️ Cybersecurity</div>
-  </div>
-</div></div>
-<footer>Updated 2025-05-30 15:43:08 · Built by Faruk Ahmed</footer>
-<script>
-const posts = document.querySelectorAll('.card');
-function filterPosts() {
-  const query = document.getElementById('searchInput').value.toLowerCase();
-  posts.forEach(post => {
-    const title = post.getAttribute('data-title');
-    post.style.display = title.includes(query) ? '' : 'none';
-  });
-}
-function filterTag(tag) {
-  posts.forEach(post => {
-    const tags = post.getAttribute('data-tags');
-    post.style.display = (tag === 'All' || tags.includes(tag)) ? '' : 'none';
-  });
-}
-</script></body></html>
+  <footer>&copy; 2025 NextGen Threat · Built with ❤️ by Faruk Ahmed</footer>
+  <script>
+    const allPosts = document.querySelectorAll('.card');
+    function filterPosts() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      allPosts.forEach(post => {
+        const title = post.getAttribute('data-title');
+        const words = title.split(' ');
+        post.style.display = words.some(word => word.includes(query)) ? '' : 'none';
+      });
+    }
+    function filterTag(tag) {
+      allPosts.forEach(post => {
+        const tags = post.getAttribute('data-tags');
+        if (tag === 'All' || tags.includes(tag)) {
+          post.style.display = '';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
