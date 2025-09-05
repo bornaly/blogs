@@ -1,535 +1,768 @@
-<!DOCTYPE html><html lang="en"><head>
-<meta charset="UTF-8"><title>NextGen Threat Blog</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<style>
-body { font-family: 'Roboto', sans-serif; background: #f5f7fa; margin: 0; }
-header { background: #003366; color: white; text-align: center; padding: 40px 20px; }
-.search-container { text-align: center; margin: 20px; }
-.search-container input { padding: 10px; width: 60%; max-width: 400px; border-radius: 8px; border: 1px solid #ccc; }
-.filter { text-align: center; margin: 10px; }
-.filter button { padding: 10px 15px; margin: 5px; border: none; background: #007acc; color: white; border-radius: 8px; cursor: pointer; }
-.container { max-width: 1100px; margin: 20px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.card { background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.07); }
-.card img { width: 100%; height: 220px; object-fit: cover; }
-.card-content { padding: 20px; }
-.meta { font-size: 0.85em; color: #777; }
-footer { background: #003366; color: white; text-align: center; padding: 20px; font-size: 0.9em; }
-</style></head><body>
-<header><h1>NextGen Threat</h1><p>Cybersecurity & Tech Insights by Faruk Ahmed</p></header>
-<div class='search-container'><input type='text' id='searchInput' onkeyup='filterPosts()' placeholder='Search by title...'></div>
-<div class='filter'>
-  <button onclick="filterTag('All')">All</button>
-  <button onclick="filterTag('Linux')">Linux</button>
-  <button onclick="filterTag('Bash')">Bash</button>
-  <button onclick="filterTag('Python')">Python</button>
-  <button onclick="filterTag('Cybersecurity')">Cybersecurity</button>
-</div>
-<div class='container'>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/5-linux-commands-hackers-use-and-how-to-detect-them-on-your-server-d44f488f7fa8" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/5-linux-commands-hackers-use-and-how-to-detect-them-on-your-server-d44f488f7fa8" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/5-linux-hardening-techniques-i-apply-before-hosting-any-website-d3a58c9836ff" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/5-linux-hardening-techniques-i-apply-before-hosting-any-website-d3a58c9836ff" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/5-more-techniques-to-lock-down-public-facing-linux-servers-63b45e3930b6" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/5-more-techniques-to-lock-down-public-facing-linux-servers-63b45e3930b6" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/5-windows-defender-features-youre-probably-not-using-but-should-be-ca02740fc76d" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/5-windows-defender-features-youre-probably-not-using-but-should-be-ca02740fc76d" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/6-linux-misconfigurations-i-regret-not-catching-sooner-a6769849762d" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/6-linux-misconfigurations-i-regret-not-catching-sooner-a6769849762d" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/6-signs-your-linux-server-might-be-compromised-and-what-to-do-next-5d3b4032e3cd" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/6-signs-your-linux-server-might-be-compromised-and-what-to-do-next-5d3b4032e3cd" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/7-cis-security-best-practices-i-apply-on-every-linux-server-i-set-up-8a8e723a4281" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/7-cis-security-best-practices-i-apply-on-every-linux-server-i-set-up-8a8e723a4281" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/7-hidden-backdoors-ive-found-on-compromised-linux-servers-and-how-to-remove-them-f66406f7cb0a" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/7-hidden-backdoors-ive-found-on-compromised-linux-servers-and-how-to-remove-them-f66406f7cb0a" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/7-linux-security-mistakes-i-made-so-you-dont-have-to-27107263be7a" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/7-linux-security-mistakes-i-made-so-you-dont-have-to-27107263be7a" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/7-things-i-check-immediately-after-logging-into-a-linux-server-i-didnt-set-up-477874f4d8a4" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/7-things-i-check-immediately-after-logging-into-a-linux-server-i-didnt-set-up-477874f4d8a4" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/7-windows-server-defaults-you-should-change-right-after-installation-310e56fee2a1" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/7-windows-server-defaults-you-should-change-right-after-installation-310e56fee2a1" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/8-log-files-every-linux-admin-should-monitor-daily-5d9334830392" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/8-log-files-every-linux-admin-should-monitor-daily-5d9334830392" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-a-controlled-breach-test-helped-me-harden-my-linux-server-instantly-2970664c336f" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-a-controlled-breach-test-helped-me-harden-my-linux-server-instantly-2970664c336f" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-accidentally-left-a-port-open-on-my-linux-server-and-how-i-caught-it-bffd2c052514" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-accidentally-left-a-port-open-on-my-linux-server-and-how-i-caught-it-bffd2c052514" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-caught-a-suspicious-shell-script-running-in-tmp-and-what-it-taught-me-19fcd7abe63a" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-caught-a-suspicious-shell-script-running-in-tmp-and-what-it-taught-me-19fcd7abe63a" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-found-a-hidden-backdoor-user-account-on-my-ubuntu-server-and-what-i-did-about-it-d8bd0dcc7926" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-found-a-hidden-backdoor-user-account-on-my-ubuntu-server-and-what-i-did-about-it-d8bd0dcc7926" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-found-a-hidden-reverse-shell-running-as-www-data-and-what-i-did-about-it-cae6df369583" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-found-a-hidden-reverse-shell-running-as-www-data-and-what-i-did-about-it-cae6df369583" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-found-an-unknown-cron-job-mining-crypto-on-my-ubuntu-server-25bc118b65a7" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-found-an-unknown-cron-job-mining-crypto-on-my-ubuntu-server-25bc118b65a7" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-harden-my-linux-server-in-30-minutes-after-every-fresh-install-ubuntu-red-hat-7c92c8e5c12b" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-harden-my-linux-server-in-30-minutes-after-every-fresh-install-ubuntu-red-hat-7c92c8e5c12b" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-hunt-for-silent-rootkits-on-linux-before-they-hunt-me-a94b723fe659" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-hunt-for-silent-rootkits-on-linux-before-they-hunt-me-a94b723fe659" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-rebuild-a-linux-server-after-a-suspected-compromise-step-by-step-68f79e4a9e52" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-rebuild-a-linux-server-after-a-suspected-compromise-step-by-step-68f79e4a9e52" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-spot-a-suspicious-process-on-my-linux-server-before-it-does-damage-b9092ce88f6f" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-spot-a-suspicious-process-on-my-linux-server-before-it-does-damage-b9092ce88f6f" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-use-aide-to-detect-unauthorized-changes-on-my-linux-and-ubuntu-servers-2b7c83a76d34" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-use-aide-to-detect-unauthorized-changes-on-my-linux-and-ubuntu-servers-2b7c83a76d34" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-hidden-changes-on-my-linux-server-f8c275b769a0" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-hidden-changes-on-my-linux-server-f8c275b769a0" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-silent-security-threats-on-linux-9e9b5ba48895" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-silent-security-threats-on-linux-9e9b5ba48895" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-use-bash-scripts-to-save-time-and-earn-more-as-a-linux-freelancer-959f5d31474e" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-use-bash-scripts-to-save-time-and-earn-more-as-a-linux-freelancer-959f5d31474e" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-use-fail2ban-on-ubuntu-and-linux-to-block-attackers-before-they-get-in-fdb848ce9c6c" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-use-fail2ban-on-ubuntu-and-linux-to-block-attackers-before-they-get-in-fdb848ce9c6c" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-i-use-netstat-and-ss-to-catch-suspicious-connections-on-linux-ee69f93a57c2" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-i-use-netstat-and-ss-to-catch-suspicious-connections-on-linux-ee69f93a57c2" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-to-audit-a-linux-or-ubuntu-server-like-a-security-consultant-39029092a96a" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-to-audit-a-linux-or-ubuntu-server-like-a-security-consultant-39029092a96a" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-to-audit-your-linux-server-for-hidden-threats-in-under-15-minutes-d057476f631d" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-to-audit-your-linux-server-for-hidden-threats-in-under-15-minutes-d057476f631d" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-to-automatically-lock-out-ssh-brute-force-attacks-on-ubuntu-and-red-hat-69e5e07d049b" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-to-automatically-lock-out-ssh-brute-force-attacks-on-ubuntu-and-red-hat-69e5e07d049b" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/how-to-detect-suspicious-activity-on-a-linux-server-in-under-5-minutes-6a60afd52a94" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/how-to-detect-suspicious-activity-on-a-linux-server-in-under-5-minutes-6a60afd52a94" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/i-taught-my-linux-server-to-feel-regret-then-watched-it-apologize-in-real-time-a9ceef9d33f3" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/i-taught-my-linux-server-to-feel-regret-then-watched-it-apologize-in-real-time-a9ceef9d33f3" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/immutable-infrastructure-on-linux-why-i-dont-modify-servers-after-deployment-0c38885c37cb" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/immutable-infrastructure-on-linux-why-i-dont-modify-servers-after-deployment-0c38885c37cb" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/the-5-most-dangerous-linux-services-if-left-unsecured-53a96ca3924f" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-5-most-dangerous-linux-services-if-left-unsecured-53a96ca3924f" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/the-hidden-risks-of-ssh-agent-forwarding-and-how-i-avoid-them-d7abff54f567" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-hidden-risks-of-ssh-agent-forwarding-and-how-i-avoid-them-d7abff54f567" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/the-linux-rootkit-that-hid-in-plain-sight-how-i-finally-detected-it-6947d993c959" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-linux-rootkit-that-hid-in-plain-sight-how-i-finally-detected-it-6947d993c959" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/the-linux-service-that-almost-let-attackers-slip-in-and-how-i-found-it-just-in-time-07b72a883f78" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-linux-service-that-almost-let-attackers-slip-in-and-how-i-found-it-just-in-time-07b72a883f78" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/the-one-linux-command-that-saved-me-from-a-server-meltdown-449ccdb31f77" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-one-linux-command-that-saved-me-from-a-server-meltdown-449ccdb31f77" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-exposes-you-and-how-i-fixed-it-7ad94ee1d4b1" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-exposes-you-and-how-i-fixed-it-7ad94ee1d4b1" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-saved-me-from-a-silent-breach-a0a138d25962" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-saved-me-from-a-silent-breach-a0a138d25962" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/the-one-log-entry-that-made-me-realize-my-linux-server-was-being-scanned-03775774cc5d" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-one-log-entry-that-made-me-realize-my-linux-server-was-being-scanned-03775774cc5d" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/the-ultimate-fusion-linux-ubuntu-and-cybersecurity-449877563bc7" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/the-ultimate-fusion-linux-ubuntu-and-cybersecurity-449877563bc7" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/what-i-check-every-week-to-keep-my-linux-servers-safe-and-stable-cc05029c4e98" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/what-i-check-every-week-to-keep-my-linux-servers-safe-and-stable-cc05029c4e98" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/what-i-check-first-when-a-linux-server-starts-acting-suspicious-5bce6b46f0c9" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/what-i-check-first-when-a-linux-server-starts-acting-suspicious-5bce6b46f0c9" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/what-i-do-before-letting-any-app-run-as-root-on-my-linux-server-a3eba7c4773f" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/what-i-do-before-letting-any-app-run-as-root-on-my-linux-server-a3eba7c4773f" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/what-i-do-the-moment-i-suspect-my-ubuntu-server-has-been-compromised-a88d0a68cfff" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/what-i-do-the-moment-i-suspect-my-ubuntu-server-has-been-compromised-a88d0a68cfff" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/what-i-learned-publishing-5-technical-blogs-in-7-days-on-medium-7b130d6b88fb" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/what-i-learned-publishing-5-technical-blogs-in-7-days-on-medium-7b130d6b88fb" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-always-check-etc-sudoers-d-on-a-compromised-linux-server-f0363956798b" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-always-check-etc-sudoers-d-on-a-compromised-linux-server-f0363956798b" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-always-disable-unused-services-on-linux-servers-be91f0ff0901" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-always-disable-unused-services-on-linux-servers-be91f0ff0901" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-always-monitor-outbound-traffic-on-my-linux-servers-b54001cf0889" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-always-monitor-outbound-traffic-on-my-linux-servers-b54001cf0889" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-always-set-a-login-banner-on-linux-servers-and-what-i-put-in-it-60eec3336f3b" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-always-set-a-login-banner-on-linux-servers-and-what-i-put-in-it-60eec3336f3b" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-always-set-up-file-integrity-monitoring-on-linux-servers-f7929fe4db39" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-always-set-up-file-integrity-monitoring-on-linux-servers-f7929fe4db39" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-check-for-hidden-processes-every-week-on-my-linux-servers-and-you-should-too-bccc5d9196ed" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-check-for-hidden-processes-every-week-on-my-linux-servers-and-you-should-too-bccc5d9196ed" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-enable-multi-factor-authentication-mfa-for-ssh-on-linux-servers-88f0a07ffb53" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-enable-multi-factor-authentication-mfa-for-ssh-on-linux-servers-88f0a07ffb53" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-never-allow-root-ssh-logins-on-my-linux-servers-abf3bef9ca8a" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-never-allow-root-ssh-logins-on-my-linux-servers-abf3bef9ca8a" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-never-trust-pre-installed-packages-on-linux-or-ubuntu-servers-c7da9ab86e13" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-never-trust-pre-installed-packages-on-linux-or-ubuntu-servers-c7da9ab86e13" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-never-trust-pre-installed-packages-on-linux-or-ubuntu-servers-fe88dcacd5ae" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-never-trust-pre-installed-packages-on-linux-or-ubuntu-servers-fe88dcacd5ae" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-no-longer-trust-secure-by-default-in-linux-server-installs-acb225842736" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-no-longer-trust-secure-by-default-in-linux-server-installs-acb225842736" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-run-multiple-ssh-keys-instead-of-just-one-2bc4065c5415" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-run-multiple-ssh-keys-instead-of-just-one-2bc4065c5415" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-set-email-alerts-for-every-new-user-added-to-my-linux-server-and-how-you-can-too-98ccc369d7f7" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-set-email-alerts-for-every-new-user-added-to-my-linux-server-and-how-you-can-too-98ccc369d7f7" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-treat-every-new-linux-server-as-already-compromised-3e740871ce06" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-treat-every-new-linux-server-as-already-compromised-3e740871ce06" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-b2e8f43c3b0f" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-b2e8f43c3b0f" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-d06c6f60eee9" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-d06c6f60eee9" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/@bornaly/why-you-should-never-trust-default-configurations-on-a-fresh-linux-install-fde5c62ed8a8" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/@bornaly/why-you-should-never-trust-default-configurations-on-a-fresh-linux-install-fde5c62ed8a8" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/aws-in-plain-english/why-ai-powered-attacks-make-linux-hardening-more-urgent-than-ever-a816ced453b9" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/aws-in-plain-english/why-ai-powered-attacks-make-linux-hardening-more-urgent-than-ever-a816ced453b9" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/aws-in-plain-english/why-i-never-trust-default-linux-user-accounts-and-neither-should-you-adf5fad9fe95" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/aws-in-plain-english/why-i-never-trust-default-linux-user-accounts-and-neither-should-you-adf5fad9fe95" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/nextgenthreat/7-critical-linux-logs-you-should-review-after-a-security-incident-0adaa12906af" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/nextgenthreat/7-critical-linux-logs-you-should-review-after-a-security-incident-0adaa12906af" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/nextgenthreat/the-first-24-hours-after-a-linux-breach-my-incident-response-playbook-3b70ac59b11d" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/nextgenthreat/the-first-24-hours-after-a-linux-breach-my-incident-response-playbook-3b70ac59b11d" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div>
-<div class='card' data-tags="General" data-title="just a moment...">
-  <a href="https://medium.com/nextgenthreat/the-hidden-danger-of-old-users-why-i-regularly-audit-etc-passwd-on-my-linux-servers-53a2addb47dc" target="_blank"><img src="https://via.placeholder.com/600x400" alt="Post image"></a>
-  <div class='card-content'>
-    <h2><a href="https://medium.com/nextgenthreat/the-hidden-danger-of-old-users-why-i-regularly-audit-etc-passwd-on-my-linux-servers-53a2addb47dc" target="_blank">Just a moment...</a></h2>
-    <div class='meta'>📅 Unknown · ⏱️ 1 min read · 👏 0 claps · 🏷️ General</div>
-  </div>
-</div></div>
-<footer>Updated 2025-09-05 16:56:23 · Built by Faruk Ahmed</footer>
-<script>
-const posts = document.querySelectorAll('.card');
-function filterPosts() {
-  const query = document.getElementById('searchInput').value.toLowerCase();
-  posts.forEach(post => {
-    const title = post.getAttribute('data-title');
-    post.style.display = title.includes(query) ? '' : 'none';
-  });
-}
-function filterTag(tag) {
-  posts.forEach(post => {
-    const tags = post.getAttribute('data-tags');
-    post.style.display = (tag === 'All' || tags.includes(tag)) ? '' : 'none';
-  });
-}
-</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NextGen Threat Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Roboto', sans-serif; background: #f5f7fa; margin: 0; }
+    header { background: #003366; color: white; text-align: center; padding: 40px 20px; }
+    header h1 { font-size: 2.5em; margin: 0; }
+    header p { font-size: 1.2em; margin-top: 10px; }
+    .search-container { text-align: center; margin: 20px auto; }
+    .search-container input { padding: 10px; width: 60%; max-width: 400px; font-size: 1em; border: 1px solid #ccc; border-radius: 8px; }
+    .filter { text-align: center; margin: 10px; }
+    .filter button { padding: 10px 15px; margin: 5px; border: none; background: #007acc; color: white; border-radius: 8px; cursor: pointer; }
+    .container { max-width: 1100px; margin: 20px auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .card { background: white; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.07); overflow: hidden; transition: transform 0.3s ease; }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .card-content { padding: 20px; }
+    .card-content h2 { margin: 0 0 10px; font-size: 1.4em; color: #003366; }
+    .meta { font-size: 0.85em; color: #777; margin-top: 8px; }
+    footer { background: #003366; color: white; text-align: center; padding: 20px; font-size: 0.9em; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NextGen Threat</h1>
+    <p>Cybersecurity & Tech Insights by Faruk Ahmed</p>
+  </header>
+  <div class='search-container'>
+    <input type='text' id='searchInput' onkeyup='filterPosts()' placeholder='Search blog titles...'>
+  </div>
+  <div class='filter'>
+    <button onclick="filterTag('All')">All</button>
+    <button onclick="filterTag('Python')">Python</button>
+    <button onclick="filterTag('Linux')">Linux</button>
+    <button onclick="filterTag('Bash')">Bash</button>
+    <button onclick="filterTag('Cybersecurity')">Cybersecurity</button>
+  </div>
+  <div class='container' id='postContainer'>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/5-linux-commands-hackers-use-and-how-to-detect-them-on-your-server-d44f488f7fa8" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/5-linux-commands-hackers-use-and-how-to-detect-them-on-your-server-d44f488f7fa8" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/5-linux-hardening-techniques-i-apply-before-hosting-any-website-d3a58c9836ff" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/5-linux-hardening-techniques-i-apply-before-hosting-any-website-d3a58c9836ff" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/5-more-techniques-to-lock-down-public-facing-linux-servers-63b45e3930b6" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/5-more-techniques-to-lock-down-public-facing-linux-servers-63b45e3930b6" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/5-windows-defender-features-youre-probably-not-using-but-should-be-ca02740fc76d" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/5-windows-defender-features-youre-probably-not-using-but-should-be-ca02740fc76d" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/6-linux-misconfigurations-i-regret-not-catching-sooner-a6769849762d" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/6-linux-misconfigurations-i-regret-not-catching-sooner-a6769849762d" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/6-signs-your-linux-server-might-be-compromised-and-what-to-do-next-5d3b4032e3cd" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/6-signs-your-linux-server-might-be-compromised-and-what-to-do-next-5d3b4032e3cd" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/7-cis-security-best-practices-i-apply-on-every-linux-server-i-set-up-8a8e723a4281" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/7-cis-security-best-practices-i-apply-on-every-linux-server-i-set-up-8a8e723a4281" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/7-hidden-backdoors-ive-found-on-compromised-linux-servers-and-how-to-remove-them-f66406f7cb0a" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/7-hidden-backdoors-ive-found-on-compromised-linux-servers-and-how-to-remove-them-f66406f7cb0a" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/7-linux-security-mistakes-i-made-so-you-dont-have-to-27107263be7a" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/7-linux-security-mistakes-i-made-so-you-dont-have-to-27107263be7a" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/7-things-i-check-immediately-after-logging-into-a-linux-server-i-didnt-set-up-477874f4d8a4" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/7-things-i-check-immediately-after-logging-into-a-linux-server-i-didnt-set-up-477874f4d8a4" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/7-windows-server-defaults-you-should-change-right-after-installation-310e56fee2a1" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/7-windows-server-defaults-you-should-change-right-after-installation-310e56fee2a1" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/8-log-files-every-linux-admin-should-monitor-daily-5d9334830392" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/8-log-files-every-linux-admin-should-monitor-daily-5d9334830392" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-a-controlled-breach-test-helped-me-harden-my-linux-server-instantly-2970664c336f" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-a-controlled-breach-test-helped-me-harden-my-linux-server-instantly-2970664c336f" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-accidentally-left-a-port-open-on-my-linux-server-and-how-i-caught-it-bffd2c052514" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-accidentally-left-a-port-open-on-my-linux-server-and-how-i-caught-it-bffd2c052514" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-caught-a-suspicious-shell-script-running-in-tmp-and-what-it-taught-me-19fcd7abe63a" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-caught-a-suspicious-shell-script-running-in-tmp-and-what-it-taught-me-19fcd7abe63a" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-found-a-hidden-backdoor-user-account-on-my-ubuntu-server-and-what-i-did-about-it-d8bd0dcc7926" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-found-a-hidden-backdoor-user-account-on-my-ubuntu-server-and-what-i-did-about-it-d8bd0dcc7926" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-found-a-hidden-reverse-shell-running-as-www-data-and-what-i-did-about-it-cae6df369583" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-found-a-hidden-reverse-shell-running-as-www-data-and-what-i-did-about-it-cae6df369583" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-found-an-unknown-cron-job-mining-crypto-on-my-ubuntu-server-25bc118b65a7" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-found-an-unknown-cron-job-mining-crypto-on-my-ubuntu-server-25bc118b65a7" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-harden-my-linux-server-in-30-minutes-after-every-fresh-install-ubuntu-red-hat-7c92c8e5c12b" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-harden-my-linux-server-in-30-minutes-after-every-fresh-install-ubuntu-red-hat-7c92c8e5c12b" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-hunt-for-silent-rootkits-on-linux-before-they-hunt-me-a94b723fe659" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-hunt-for-silent-rootkits-on-linux-before-they-hunt-me-a94b723fe659" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-rebuild-a-linux-server-after-a-suspected-compromise-step-by-step-68f79e4a9e52" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-rebuild-a-linux-server-after-a-suspected-compromise-step-by-step-68f79e4a9e52" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-spot-a-suspicious-process-on-my-linux-server-before-it-does-damage-b9092ce88f6f" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-spot-a-suspicious-process-on-my-linux-server-before-it-does-damage-b9092ce88f6f" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-use-aide-to-detect-unauthorized-changes-on-my-linux-and-ubuntu-servers-2b7c83a76d34" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-use-aide-to-detect-unauthorized-changes-on-my-linux-and-ubuntu-servers-2b7c83a76d34" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-hidden-changes-on-my-linux-server-f8c275b769a0" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-hidden-changes-on-my-linux-server-f8c275b769a0" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-silent-security-threats-on-linux-9e9b5ba48895" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-use-auditd-to-catch-silent-security-threats-on-linux-9e9b5ba48895" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-use-bash-scripts-to-save-time-and-earn-more-as-a-linux-freelancer-959f5d31474e" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-use-bash-scripts-to-save-time-and-earn-more-as-a-linux-freelancer-959f5d31474e" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-use-fail2ban-on-ubuntu-and-linux-to-block-attackers-before-they-get-in-fdb848ce9c6c" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-use-fail2ban-on-ubuntu-and-linux-to-block-attackers-before-they-get-in-fdb848ce9c6c" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-i-use-netstat-and-ss-to-catch-suspicious-connections-on-linux-ee69f93a57c2" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-i-use-netstat-and-ss-to-catch-suspicious-connections-on-linux-ee69f93a57c2" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-to-audit-a-linux-or-ubuntu-server-like-a-security-consultant-39029092a96a" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-to-audit-a-linux-or-ubuntu-server-like-a-security-consultant-39029092a96a" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-to-audit-your-linux-server-for-hidden-threats-in-under-15-minutes-d057476f631d" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-to-audit-your-linux-server-for-hidden-threats-in-under-15-minutes-d057476f631d" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-to-automatically-lock-out-ssh-brute-force-attacks-on-ubuntu-and-red-hat-69e5e07d049b" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-to-automatically-lock-out-ssh-brute-force-attacks-on-ubuntu-and-red-hat-69e5e07d049b" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/how-to-detect-suspicious-activity-on-a-linux-server-in-under-5-minutes-6a60afd52a94" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/how-to-detect-suspicious-activity-on-a-linux-server-in-under-5-minutes-6a60afd52a94" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/i-taught-my-linux-server-to-feel-regret-then-watched-it-apologize-in-real-time-a9ceef9d33f3" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/i-taught-my-linux-server-to-feel-regret-then-watched-it-apologize-in-real-time-a9ceef9d33f3" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/immutable-infrastructure-on-linux-why-i-dont-modify-servers-after-deployment-0c38885c37cb" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/immutable-infrastructure-on-linux-why-i-dont-modify-servers-after-deployment-0c38885c37cb" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/the-5-most-dangerous-linux-services-if-left-unsecured-53a96ca3924f" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-5-most-dangerous-linux-services-if-left-unsecured-53a96ca3924f" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/the-hidden-risks-of-ssh-agent-forwarding-and-how-i-avoid-them-d7abff54f567" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-hidden-risks-of-ssh-agent-forwarding-and-how-i-avoid-them-d7abff54f567" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/the-linux-rootkit-that-hid-in-plain-sight-how-i-finally-detected-it-6947d993c959" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-linux-rootkit-that-hid-in-plain-sight-how-i-finally-detected-it-6947d993c959" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/the-linux-service-that-almost-let-attackers-slip-in-and-how-i-found-it-just-in-time-07b72a883f78" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-linux-service-that-almost-let-attackers-slip-in-and-how-i-found-it-just-in-time-07b72a883f78" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/the-one-linux-command-that-saved-me-from-a-server-meltdown-449ccdb31f77" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-one-linux-command-that-saved-me-from-a-server-meltdown-449ccdb31f77" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-exposes-you-and-how-i-fixed-it-7ad94ee1d4b1" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-exposes-you-and-how-i-fixed-it-7ad94ee1d4b1" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-saved-me-from-a-silent-breach-a0a138d25962" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-one-linux-security-habit-that-saved-me-from-a-silent-breach-a0a138d25962" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/the-one-log-entry-that-made-me-realize-my-linux-server-was-being-scanned-03775774cc5d" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-one-log-entry-that-made-me-realize-my-linux-server-was-being-scanned-03775774cc5d" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/the-ultimate-fusion-linux-ubuntu-and-cybersecurity-449877563bc7" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/the-ultimate-fusion-linux-ubuntu-and-cybersecurity-449877563bc7" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/what-i-check-every-week-to-keep-my-linux-servers-safe-and-stable-cc05029c4e98" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/what-i-check-every-week-to-keep-my-linux-servers-safe-and-stable-cc05029c4e98" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/what-i-check-first-when-a-linux-server-starts-acting-suspicious-5bce6b46f0c9" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/what-i-check-first-when-a-linux-server-starts-acting-suspicious-5bce6b46f0c9" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/what-i-do-before-letting-any-app-run-as-root-on-my-linux-server-a3eba7c4773f" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/what-i-do-before-letting-any-app-run-as-root-on-my-linux-server-a3eba7c4773f" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/what-i-do-the-moment-i-suspect-my-ubuntu-server-has-been-compromised-a88d0a68cfff" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/what-i-do-the-moment-i-suspect-my-ubuntu-server-has-been-compromised-a88d0a68cfff" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/what-i-learned-publishing-5-technical-blogs-in-7-days-on-medium-7b130d6b88fb" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/what-i-learned-publishing-5-technical-blogs-in-7-days-on-medium-7b130d6b88fb" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-always-check-etc-sudoers-d-on-a-compromised-linux-server-f0363956798b" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-always-check-etc-sudoers-d-on-a-compromised-linux-server-f0363956798b" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-always-disable-unused-services-on-linux-servers-be91f0ff0901" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-always-disable-unused-services-on-linux-servers-be91f0ff0901" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-always-monitor-outbound-traffic-on-my-linux-servers-b54001cf0889" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-always-monitor-outbound-traffic-on-my-linux-servers-b54001cf0889" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-always-set-a-login-banner-on-linux-servers-and-what-i-put-in-it-60eec3336f3b" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-always-set-a-login-banner-on-linux-servers-and-what-i-put-in-it-60eec3336f3b" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-always-set-up-file-integrity-monitoring-on-linux-servers-f7929fe4db39" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-always-set-up-file-integrity-monitoring-on-linux-servers-f7929fe4db39" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-check-for-hidden-processes-every-week-on-my-linux-servers-and-you-should-too-bccc5d9196ed" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-check-for-hidden-processes-every-week-on-my-linux-servers-and-you-should-too-bccc5d9196ed" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-enable-multi-factor-authentication-mfa-for-ssh-on-linux-servers-88f0a07ffb53" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-enable-multi-factor-authentication-mfa-for-ssh-on-linux-servers-88f0a07ffb53" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-never-allow-root-ssh-logins-on-my-linux-servers-abf3bef9ca8a" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-never-allow-root-ssh-logins-on-my-linux-servers-abf3bef9ca8a" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-never-trust-pre-installed-packages-on-linux-or-ubuntu-servers-c7da9ab86e13" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-never-trust-pre-installed-packages-on-linux-or-ubuntu-servers-c7da9ab86e13" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-never-trust-pre-installed-packages-on-linux-or-ubuntu-servers-fe88dcacd5ae" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-never-trust-pre-installed-packages-on-linux-or-ubuntu-servers-fe88dcacd5ae" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-no-longer-trust-secure-by-default-in-linux-server-installs-acb225842736" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-no-longer-trust-secure-by-default-in-linux-server-installs-acb225842736" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-run-multiple-ssh-keys-instead-of-just-one-2bc4065c5415" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-run-multiple-ssh-keys-instead-of-just-one-2bc4065c5415" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-set-email-alerts-for-every-new-user-added-to-my-linux-server-and-how-you-can-too-98ccc369d7f7" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-set-email-alerts-for-every-new-user-added-to-my-linux-server-and-how-you-can-too-98ccc369d7f7" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-treat-every-new-linux-server-as-already-compromised-3e740871ce06" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-treat-every-new-linux-server-as-already-compromised-3e740871ce06" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-b2e8f43c3b0f" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-b2e8f43c3b0f" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-d06c6f60eee9" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-i-use-read-only-partitions-on-my-linux-servers-and-you-should-too-d06c6f60eee9" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/@bornaly/why-you-should-never-trust-default-configurations-on-a-fresh-linux-install-fde5c62ed8a8" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/@bornaly/why-you-should-never-trust-default-configurations-on-a-fresh-linux-install-fde5c62ed8a8" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/aws-in-plain-english/why-ai-powered-attacks-make-linux-hardening-more-urgent-than-ever-a816ced453b9" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/aws-in-plain-english/why-ai-powered-attacks-make-linux-hardening-more-urgent-than-ever-a816ced453b9" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/aws-in-plain-english/why-i-never-trust-default-linux-user-accounts-and-neither-should-you-adf5fad9fe95" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/aws-in-plain-english/why-i-never-trust-default-linux-user-accounts-and-neither-should-you-adf5fad9fe95" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/nextgenthreat/7-critical-linux-logs-you-should-review-after-a-security-incident-0adaa12906af" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/nextgenthreat/7-critical-linux-logs-you-should-review-after-a-security-incident-0adaa12906af" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/nextgenthreat/the-first-24-hours-after-a-linux-breach-my-incident-response-playbook-3b70ac59b11d" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/nextgenthreat/the-first-24-hours-after-a-linux-breach-my-incident-response-playbook-3b70ac59b11d" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+    <div class='card' data-tags='General' data-title='just a moment...'>
+      <a href="https://medium.com/nextgenthreat/the-hidden-danger-of-old-users-why-i-regularly-audit-etc-passwd-on-my-linux-servers-53a2addb47dc" target="_blank">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/format:webp/1*e1-WmB_OIgBjE1TUVIa5Qg.png" alt="Post image">
+      </a>
+      <div class='card-content'>
+        <h2><a href="https://medium.com/nextgenthreat/the-hidden-danger-of-old-users-why-i-regularly-audit-etc-passwd-on-my-linux-servers-53a2addb47dc" target="_blank">Just a moment...</a></h2>
+        <div class='meta'>📅 Unknown Date · ⏱️ 1 min read · 🏷️ General</div>
+      </div>
+    </div>
+
+  </div>
+  <footer>&copy; 2025 NextGen Threat · Built with ❤️ by Faruk Ahmed</footer>
+  <script>
+    const allPosts = document.querySelectorAll('.card');
+    function filterPosts() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      allPosts.forEach(post => {
+        const title = post.getAttribute('data-title');
+        const words = title.split(' ');
+        post.style.display = words.some(word => word.includes(query)) ? '' : 'none';
+      });
+    }
+    function filterTag(tag) {
+      allPosts.forEach(post => {
+        const tags = post.getAttribute('data-tags');
+        if (tag === 'All' || tags.includes(tag)) {
+          post.style.display = '';
+        } else {
+          post.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
